@@ -46,7 +46,12 @@ async function displayInfo() {
         
 };
 
-window.addEventListener('load', () => {
-    displayInfo()
-    getInfo()
-})
+// window.addEventListener('load', async () => {
+//    async displayInfo()
+//     getInfo()
+// })
+window.addEventListener('load', async () => {
+    await displayInfo();
+    await getInfo();
+ });
+ 
