@@ -37,8 +37,9 @@ async function displayInfo() {
     const storedName = localStorage.getItem('name');
 
     const repos = await getRepos();
-    const spotifyWebApp = repos[3]
-    // console.log(spotifyWebApp)
+    console.log(repos)
+    const spotifyWebApp = repos.find(item => item.name === 'DiscoverWeeklyToNewPlaylist')
+    console.log(spotifyWebApp)
     
     username.textContent = storedName
     spotifyAppName.textContent = spotifyWebApp.name
@@ -46,12 +47,8 @@ async function displayInfo() {
         
 };
 
-// window.addEventListener('load', async () => {
-//    async displayInfo()
-//     getInfo()
-// })
 window.addEventListener('load', async () => {
-    await displayInfo();
-    await getInfo();
- });
+    displayInfo()
+    getInfo()
+})
  
