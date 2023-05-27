@@ -42,9 +42,7 @@ async function displayInfo() {
     console.log(spotifyWebApp)
     
     username.textContent = storedName
-    spotifyAppName.textContent = spotifyWebApp.name
-    spotifyAppDesc.textContent = spotifyWebApp.description
-        
+    spotifyAppName.textContent = spotifyWebApp.name       
 };
 
 window.addEventListener('load', async () => {
